@@ -1,0 +1,14 @@
+StriveNest ERP - Alembic Migrations Directory
+============================================
+
+This directory manages database schema migrations.
+
+Commands:
+  # Create a new migration revision
+  alembic revision --autogenerate -m "Description of changes"
+
+  # Apply pending migrations
+  alembic upgrade head
+
+  # Rollback last migration
+  alembic downgrade -1

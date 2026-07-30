@@ -1,0 +1,3 @@
+"""
+StriveNest ERP Application Package
+"""

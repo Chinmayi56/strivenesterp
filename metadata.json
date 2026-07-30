@@ -1,0 +1,6 @@
+{
+  "name": "StriveNest ERP System",
+  "description": "Enterprise ERP System for StriveNest featuring independent Super Admin and Employee portals with complete JWT authentication, token refresh, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
