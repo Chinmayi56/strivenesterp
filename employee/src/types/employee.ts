@@ -1,4 +1,21 @@
-export interface EmployeeProfile {
+
+export type EmployeeRole =
+  | "SUPER_ADMIN"
+  | "SUB_ADMIN"
+  | "HR_MANAGER"
+  | "DEPARTMENT_HEAD"
+  | "EMPLOYEE"
+  | "CONTRACTOR";
+
+export type EmployeeStatus =
+  | "ACTIVE"
+  | "INACTIVE"
+  | "PENDING"
+  | "PENDING_VERIFICATION"
+  | "REJECTED"
+  | "BLOCKED";
+  
+  export interface EmployeeProfile {
   id: string;
   employee_id: string;
   first_name: string;
