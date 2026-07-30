@@ -14,12 +14,11 @@ export interface AttendanceRecord {
   updated_at: string;
 }
 
-export interface AttendancePaginatedResponse {
-  total: int;
-  page: int;
-  size: int;
-  pages: int;
-  items: AttendanceRecord[];
+export interface DashboardSummary {
+    pending_tasks: number;
+    completed_tasks: number;
+    leave_balance: number;
+    attendance_percentage: number;
 }
 
 export interface AttendanceMonthlySummary {

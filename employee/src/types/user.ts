@@ -13,17 +13,11 @@ export type EmployeeStatus =
 
 export interface EmployeeUser {
   id: string;
-  email: string;
+  employee_id: string;
   first_name: string;
   last_name: string;
-  role: EmployeeRole;
-  department?: string | null;
-  position?: string | null;
-  phone?: string | null;
-  status: EmployeeStatus;
-  is_verified: boolean;
-  last_login?: string | null;
-  created_at: string;
-  updated_at: string;
-  full_name?: string;
+  email: string;
+  role: string;
+  status: string;
+  is_active: boolean;
 }
