@@ -19,7 +19,8 @@ export const EmployeeAuthProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [refreshTokenState, setRefreshTokenState] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const role: EmployeeRole | null = user?.role || null;
+  const role: EmployeeRole | null =
+  user ? (user.role as EmployeeRole) : null;
   const authenticated = Boolean(user && accessToken);
 
   const initSession = useCallback(async () => {

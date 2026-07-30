@@ -20,6 +20,48 @@ export interface EmployeeProfile {
   last_login?: string | null;
 }
 
+export interface EmployeeUser {
+  id: number;
+
+  employee_id: string;
+
+  first_name: string;
+
+  last_name: string;
+
+  full_name?: string;
+
+  email: string;
+
+  role: EmployeeRole;
+
+  department?: string | null;
+
+  department_id?: string | null;
+
+  designation?: string | null;
+
+  designation_id?: string | null;
+
+  position?: string | null;
+
+  phone?: string | null;
+
+  profile_image?: string | null;
+
+  status?: EmployeeStatus;
+
+  is_active?: boolean;
+
+  is_verified?: boolean;
+
+  created_at?: string;
+
+  updated_at?: string;
+
+  last_login?: string | null;
+}
+
 export interface EmployeeSelfUpdatePayload {
   first_name?: string;
   last_name?: string;
