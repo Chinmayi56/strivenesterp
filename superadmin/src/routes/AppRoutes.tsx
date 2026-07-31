@@ -10,6 +10,7 @@ import { AuditLogsPage } from "../pages/AuditLogsPage";
 import { ProfilePage } from "../pages/ProfilePage";
 import { EmployeeListPage } from "../pages/EmployeeListPage";
 import { EmployeeDetailPage } from "../pages/EmployeeDetailPage";
+import LeaveManagementPage from "@/pages/leave/LeaveManagementpage";
 
 export const SuperAdminRoutes: React.FC = () => {
   return (
@@ -30,6 +31,11 @@ export const SuperAdminRoutes: React.FC = () => {
         <Route path="/users" element={<EmployeeListPage />} />
         <Route path="/security" element={<AuditLogsPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route
+        path="/admin/leaves"
+        element={<LeaveManagementPage />}
+    />
+
       </Route>
 
       {/* Catch-all Fallback */}

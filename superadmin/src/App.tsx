@@ -4,6 +4,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { ToastProvider } from "./components/Toast";
 import { SuperAdminRoutes } from "./routes/AppRoutes";
 import "./styles/index.css";
+import LeaveManagementPage from "@/pages/LeaveManagementPage";
 
 export const SuperAdminApp: React.FC<{ basename?: string }> = ({ basename }) => {
   return (

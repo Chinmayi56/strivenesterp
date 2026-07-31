@@ -75,7 +75,7 @@ export const LoginPage: React.FC = () => {
       });
 
       showSuccess(
-        "Welcome back Super Administrator.",
+        "Welcome back .",
         "Authentication Successful"
       );
 

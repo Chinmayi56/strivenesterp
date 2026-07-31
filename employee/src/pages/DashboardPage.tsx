@@ -85,9 +85,9 @@ export const DashboardPage: React.FC = () => {
             <Briefcase className="w-3.5 h-3.5" />
             EMPLOYEE PORTAL DASHBOARD
           </div>
-          <h2 className="text-2xl font-bold text-slate-100">
-            Welcome back, {user?.first_name} {user?.last_name}!
-          </h2>
+          <h1 className="text-4xl font-bold">
+  Welcome back, {user?.first_name || "Employee"}!
+</h1>
           <p className="text-xs text-slate-400">
             Employee ID: <span className="text-indigo-300 font-mono font-semibold">{user?.employee_id || "EMP-1001"}</span> • Department: <span className="text-slate-200 font-medium">{user?.department || "Engineering"}</span>
           </p>

@@ -15,6 +15,7 @@ from app.routers.project import router as project_router
 from app.routers.task import router as task_router
 from app.routers.calendar import router as calendar_router
 from app.routers.notification import router as notification_router
+from app.api.v1.admin_leave import router as admin_leave_router
 
 api_v1_router = APIRouter()
 
@@ -30,5 +31,6 @@ api_v1_router.include_router(project_router)
 api_v1_router.include_router(task_router)
 api_v1_router.include_router(calendar_router)
 api_v1_router.include_router(notification_router)
+api_v1_router.include_router(admin_leave_router)
 
 

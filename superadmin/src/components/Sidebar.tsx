@@ -1,15 +1,52 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, ShieldAlert, UserCheck, Settings, Users, KeyRound } from "lucide-react";
+import {
+  LayoutDashboard,
+  ShieldAlert,
+  UserCheck,
+  Users,
+  KeyRound,
+  CalendarDays,
+} from "lucide-react";
 
 export const Sidebar: React.FC = () => {
   const navItems = [
-    { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-    { label: "Employee Directory", path: "/employees", icon: Users },
-    { label: "Security Audit Logs", path: "/audit-logs", icon: ShieldAlert },
-    { label: "Security Policies", path: "/security", icon: KeyRound },
-    { label: "Admin Profile", path: "/profile", icon: UserCheck },
-  ];
+  {
+    label: "Dashboard",
+    path: "/dashboard",
+    icon: LayoutDashboard,
+  },
+
+  {
+    label: "Employee Directory",
+    path: "/employees",
+    icon: Users,
+  },
+
+  {
+    label: "Leave Management",
+    path: "/admin/leaves",
+    icon: CalendarDays,
+  },
+
+  {
+    label: "Security Audit Logs",
+    path: "/audit-logs",
+    icon: ShieldAlert,
+  },
+
+  {
+    label: "Security Policies",
+    path: "/security",
+    icon: KeyRound,
+  },
+
+  {
+    label: "Admin Profile",
+    path: "/profile",
+    icon: UserCheck,
+  },
+];
 
   return (
     <aside className="w-64 bg-slate-950/60 border-r border-slate-800/80 p-4 flex flex-col justify-between shrink-0 min-h-[calc(100vh-4rem)]">
