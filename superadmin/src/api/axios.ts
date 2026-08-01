@@ -6,9 +6,12 @@ const CONFIGURED_API_URL =
   import.meta.env.VITE_API_URL ||
   "http://127.0.0.1:8000/api/v1";
 
-const API_BASE_URL = CONFIGURED_API_URL.replace(/\/$/, "").endsWith("/api/v1")
-  ? CONFIGURED_API_URL.replace(/\/$/, "")
-  : `${CONFIGURED_API_URL.replace(/\/$/, "")}/api/v1`;
+const NORMALIZED_API_URL = CONFIGURED_API_URL.replace(/\/$/, "");
+const API_BASE_URL = NORMALIZED_API_URL.endsWith("/api/v1")
+  ? NORMALIZED_API_URL
+  : NORMALIZED_API_URL.endsWith("/api")
+    ? `${NORMALIZED_API_URL}/v1`
+    : `${NORMALIZED_API_URL}/api/v1`;
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
