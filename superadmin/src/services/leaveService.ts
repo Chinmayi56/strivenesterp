@@ -1,9 +1,26 @@
-getAllLeaves()
+import api from "./api";
 
-getPendingLeaves()
+export const getAllLeaves = async () => {
+  const response = await api.get("/leaves");
+  return response.data;
+};
 
-approveLeave()
+export const getPendingLeaves = async () => {
+  const response = await api.get("/leaves/pending");
+  return response.data;
+};
 
-rejectLeave()
+export const approveLeave = async (id: string) => {
+  const response = await api.put(`/leaves/${id}/approve`);
+  return response.data;
+};
 
-getLeaveStatistics()
+export const rejectLeave = async (id: string) => {
+  const response = await api.put(`/leaves/${id}/reject`);
+  return response.data;
+};
+
+export const getLeaveStatistics = async () => {
+  const response = await api.get("/leaves/statistics");
+  return response.data;
+};

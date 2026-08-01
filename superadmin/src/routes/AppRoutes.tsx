@@ -10,7 +10,7 @@ import { AuditLogsPage } from "../pages/AuditLogsPage";
 import { ProfilePage } from "../pages/ProfilePage";
 import { EmployeeListPage } from "../pages/EmployeeListPage";
 import { EmployeeDetailPage } from "../pages/EmployeeDetailPage";
-import LeaveManagementPage from "../pages/leave/LeaveManagementPage";
+import LeaveManagementPage from "../pages/leave/leaveManagementPage";
 
 export const SuperAdminRoutes: React.FC = () => {
   return (

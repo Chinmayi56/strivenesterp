@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { LeaveRequest } from "../../types/leave";
 import {
   CalendarDays,
   Clock3,
@@ -10,7 +11,9 @@ import {
 import { api } from "../../api/axios"; // Adjust path if needed
 
 const LeaveManagementPage = () => {
-  const [leaves, setLeaves] = useState([]);
+
+
+const [leaves, setLeaves] = useState<LeaveRequest[]>([]);
   const [loading, setLoading] = useState(true);
 
   const fetchLeaves = async () => {
@@ -79,7 +82,7 @@ const rejectLeave = async (leaveId: string) => {
 
   const totalCount = leaves.length;
 
-  const formatDate = (date) => {
+  const formatDate = (date: string) => {
     if (!date) return "-";
 
     return new Date(date).toLocaleDateString("en-IN", {
