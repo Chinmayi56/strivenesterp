@@ -1,7 +1,7 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from "axios";
 import { getStoredTokens, setStoredTokens, clearStoredTokens } from "../utils/storage";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
@@ -51,7 +51,7 @@ api.interceptors.response.use(
     }
 
     if (error.response.status === 401 && originalRequest && !originalRequest._retry) {
-      if (originalRequest.url?.includes("/auth/refresh") || originalRequest.url?.includes("/auth/login")) {
+      if (originalRequest.url?.includes("/v1/auth/refresh") || originalRequest.url?.includes("/auth/login")) {
         clearStoredTokens();
         return Promise.reject(error);
       }

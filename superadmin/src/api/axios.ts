@@ -53,7 +53,7 @@ api.interceptors.response.use(
     // Handle 401 Unauthorized
     if (error.response.status === 401 && originalRequest && !originalRequest._retry) {
       // Avoid infinite refresh loop if refresh itself fails
-      if (originalRequest.url?.includes("/auth/refresh") || originalRequest.url?.includes("/auth/login")) {
+      if (originalRequest.url?.includes("/v1/auth/refresh") || originalRequest.url?.includes("/auth/login")) {
         clearStoredTokens();
         return Promise.reject(error);
       }

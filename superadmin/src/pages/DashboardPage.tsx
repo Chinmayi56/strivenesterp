@@ -85,7 +85,7 @@ export const DashboardPage: React.FC = () => {
   const handleTriggerInterceptorTest = async () => {
     setInterceptorLog("Testing Axios 401 Auto-Refresh Interceptor...");
     try {
-      const res = await api.get("/auth/me");
+      const res = await api.get("/v1/auth/me");
       setInterceptorLog(`Interceptor Test Result: STATUS ${res.status} OK. Session valid.`);
       showSuccess("Axios interceptor validated JWT session.", "Interceptor OK");
     } catch (err: any) {
