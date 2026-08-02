@@ -18,32 +18,32 @@ export const authService = {
   },
 
   async logout(refreshToken: string): Promise<void> {
-    await api.post<ApiResponse<{ revoked: boolean }>>("/v1/auth/logout", {
+    await api.post<ApiResponse<{ revoked: boolean }>>("/auth/logout", {
       refresh_token: refreshToken,
     });
   },
 
   async getCurrentUser(): Promise<User> {
-    const response = await api.get<ApiResponse<User>>("/v1/auth/me");
+    const response = await api.get<ApiResponse<User>>("/auth/me");
     return response.data.data;
   },
 
   async refreshToken(refreshToken: string): Promise<TokenResponseData> {
-    const response = await api.post<ApiResponse<TokenResponseData>>("/v1/auth/refresh", {
+    const response = await api.post<ApiResponse<TokenResponseData>>("/auth/refresh", {
       refresh_token: refreshToken,
     });
     return response.data.data;
   },
 
   async forgotPassword(email: string): Promise<ForgotPasswordData> {
-    const response = await api.post<ApiResponse<ForgotPasswordData>>("/v1/auth/forgot-password", {
+    const response = await api.post<ApiResponse<ForgotPasswordData>>("/auth/forgot-password", {
       email,
     });
     return response.data.data;
   },
 
   async resetPassword(resetToken: string, newPassword: string): Promise<ResetPasswordData> {
-    const response = await api.post<ApiResponse<ResetPasswordData>>("/v1/auth/reset-password", {
+    const response = await api.post<ApiResponse<ResetPasswordData>>("/auth/reset-password", {
       reset_token: resetToken,
       new_password: newPassword,
     });
